@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vetrina Aviazione — Home</title>
+  <style>
+    :root{--bg:#000;--glass:rgba(255,255,255,0.06);--accent:#fff;font-family:Inter,Arial,Helvetica,sans-serif}
+    body{margin:0;background:var(--bg);color:var(--accent);-webkit-font-smoothing:antialiased;padding:28px}
+    .container{max-width:1100px;margin:0 auto}
+    header{display:flex;gap:16px;align-items:center}
+    .logo{width:76px;height:76px;border-radius:16px;background:linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{margin:0;font-size:22px}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:18px}
+    .intro{background:rgba(255,255,255,0.03);padding:18px;border-radius:12px}
+    .showcase{display:flex;flex-direction:column;gap:10px}
+    .thumbs{display:flex;gap:8px}
+    .thumb{height:100px;width:100%;border-radius:10px;background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .three-models{display:flex;gap:12px;margin-top:12px}
+    .model-card{flex:1;background:rgba(255,255,255,0.03);padding:10px;border-radius:10px;text-align:center}
+    nav{margin-top:14px;display:flex;gap:12px}
+    a.button{background:rgba(255,255,255,0.04);padding:10px 14px;border-radius:10px;color:var(--accent);text-decoration:none}
+    footer{margin-top:28px;opacity:0.8;font-size:14px}
+    .credits{margin-top:12px;font-size:13px;opacity:0.8}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">AV</div>
+      <div>
+        <h1>Vetrina Aviazione</h1>
+        <div class="muted">Guida completa per gli appassionati · Airbus & Boeing</div>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div>
+        <div class="intro">
+          <h2>Benvenuto</h2>
+          <p>Questa vetrina raccoglie i modelli commerciali di Airbus e Boeing con schede tecniche, gallerie immagini e storia operativa. Usa il catalogo per cercare un modello, esplorare varianti o salvare i tuoi preferiti.</p>
+          <p>Contatti: <a href="mailto:andreacelmic@gmail.com">andreacelmic@gmail.com</a></p>
+          <nav>
+            <a class="button" href="airbus.html">Catalogo Airbus</a>
+            <a class="button" href="boeing.html">Catalogo Boeing</a>
+            <a class="button" href="#credits">Crediti</a>
+          </nav>
+        </div>
+
+        <div class="three-models">
+          <div class="model-card">
+            <strong>Airbus A320-200</strong>
+            <div style="height:120px;margin-top:8px;background:url('assets/images/A320-200/1.jpg') center/cover no-repeat;border-radius:8px"></div>
+          </div>
+          <div class="model-card">
+            <strong>Airbus A380-800</strong>
+            <div style="height:120px;margin-top:8px;background:url('assets/images/A380-800/1.jpg') center/cover no-repeat;border-radius:8px"></div>
+          </div>
+          <div class="model-card">
+            <strong>Boeing 747-8</strong>
+            <div style="height:120px;margin-top:8px;background:url('assets/images/747-8/1.jpg') center/cover no-repeat;border-radius:8px"></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="showcase">
+        <div class="thumbs">
+          <div class="thumb" style="background:url('assets/images/hero/1.jpg') center/cover no-repeat"></div>
+          <div class="thumb" style="background:url('assets/images/hero/2.jpg') center/cover no-repeat"></div>
+          <div class="thumb" style="background:url('assets/images/hero/3.jpg') center/cover no-repeat"></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.02);padding:10px;border-radius:10px">
+          <strong>Scorri il catalogo</strong>
+          <p style="margin:6px 0 0 0">Visita le pagine dedicate per Airbus e Boeing per sfogliare tutte le schede con immagini e specifiche tecniche.</p>
+        </div>
+      </aside>
+    </div>
+
+    <section id="credits" class="credits">
+      <h3>Crediti immagini e licenze</h3>
+      <p>Le immagini usate sono prese principalmente da Wikimedia Commons e Pixabay con licenze libere.</p>
+    </section>
+
+    <footer>
+      <div>Built for GitHub Pages · Contatto: <a href="mailto:andreacelmic@gmail.com">andreacelmic@gmail.com</a></div>
+    </footer>
+  </div>
+</body>
+</html>
