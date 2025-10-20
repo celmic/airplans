@@ -1,0 +1,24 @@
+[
+  {
+    "maker": "Airbus",
+    "model": "A320-200",
+    "family": "A320",
+    "type": "narrow",
+    "intro": 1988,
+    "images": [
+      "assets/images/A320-200/1.jpg",
+      "assets/images/A320-200/2.jpg",
+      "assets/images/A320-200/3.jpg",
+      "assets/images/A320-200/4.jpg",
+      "assets/images/A320-200/5.jpg"
+    ],
+    "specs": {
+      "seating": "150-186",
+      "range_km": "6150",
+      "wingspan_m": "34.1",
+      "length_m": "37.57",
+      "mtow_kg": "73500"
+    },
+    "notes": ""
+  }
+]
