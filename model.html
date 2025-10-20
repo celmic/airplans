@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Scheda modello</title>
+<style>
+:root{--bg:#000;--accent:#fff;font-family:Inter,Arial,Helvetica,sans-serif}
+body{margin:0;background:var(--bg);color:var(--accent);padding:24px}
+.container{max-width:1000px;margin:0 auto}
+.gallery{display:flex;gap:12px;flex-wrap:wrap}
+.thumb{width:calc(50% - 12px);height:200px;border-radius:10px;background-size:cover;background-position:center}
+.specs{background:rgba(255,255,255,0.03);padding:12px;border-radius:8px;margin-top:12px}
+.back{margin-bottom:12px}
+a.button{background:rgba(255,255,255,0.04);padding:8px 12px;border-radius:8px;color:inherit;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="back"><a class="button" href="index.html">← Torna alla Home</a></div>
+  <div id="content"></div>
+  <script>
+    function q(name){const u=new URLSearchParams(location.search);return u.get(name)}
+    const model = q('m');
+    fetch('data/catalog.json').then(r=>r.json()).then(data=>{
+      const it = data.find(x=>x.model===model);
+      const content=document.getElementById('content');
+      if(!it){content.innerHTML='<h2>Modello non trovato</h2>';return;}
+      let html = `<h1>${it.model} — ${it.maker}</h1><div class="gallery">`;
+      const imgs = it.images && it.images.length? it.images : ['assets/images/placeholder.jpg'];
+      imgs.slice(0,6).forEach(u=>{html += `<div class="thumb" style="background-image:url('${u}')"></div>`});
+      html += `</div><div class="specs"><h3>Specifiche principali</h3><pre>${JSON.stringify(it.specs,null,2)}</pre></div>`;
+      html += `<div class="specs"><h3>Note</h3><p>${it.notes||'—'}</p></div>`;
+      content.innerHTML = html;
+    });
+  </script>
+</div>
+</body>
+</html>
